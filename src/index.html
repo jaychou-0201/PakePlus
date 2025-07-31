@@ -1,22 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="stylesheet" href="styles.css" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>PakePlus App</title>
-        <script type="module" src="/main.js" defer></script>
-    </head>
+<!DOCTYPE html><html><head><meta http-equiv=Content-Type content="text/html; charset=utf-8"><meta http-equiv=X-UA-Compatible content="IE=edge"><meta http-equiv=X-UA-Compatible content="chrome=1"><meta name=renderer content=webkit><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black><meta name=format-detection content="telephone=no"><link rel=stylesheet href=/cdn/element-ui/2.15.1/theme-chalk/index.css><link rel=stylesheet href=/cdn/element-ui/2.15.7/theme-chalk/index.css><link rel=stylesheet href=/cdn/animate/3.5.2/animate.css><link rel=stylesheet href=/cdn/iconfont/index.css><link rel=stylesheet href=/cdn/iconfont/avue/iconfont.css><link rel=stylesheet href=/cdn/iconfont/saber/iconfont.css><link rel=stylesheet href=/cdn/avue/2.13.2/index.css><script src=/cdn/xlsx/FileSaver.min.js></script><script src=/cdn/xlsx/xlsx.full.min.js></script><script src=/cdn/sortTable/Sortable.min.js></script><script src=/cdn/html2canvas/html2canvas.min.js></script><link rel=icon href=/favicon.png><title>MACH-MES</title><style>html,
+    body,
+    #app {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
 
-    <body>
-        <main class="container">
-            <h1>Welcome to PakePlus</h1>
+    .avue-home {
+      background-color: #303133;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
 
-            <form class="row" id="greet-form">
-                <input id="greet-input" placeholder="Enter a name..." />
-                <button type="submit">Greet</button>
-            </form>
-            <p id="greet-msg"></p>
-        </main>
-    </body>
-</html>
+    .avue-home__main {
+      user-select: none;
+      width: 100%;
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .avue-home__footer {
+      width: 100%;
+      flex-grow: 0;
+      text-align: center;
+      padding: 1em 0;
+    }
+
+    .avue-home__footer > a {
+      font-size: 12px;
+      color: #ABABAB;
+      text-decoration: none;
+    }
+
+    .avue-home__loading {
+      height: 32px;
+      width: 32px;
+      margin-bottom: 20px;
+    }
+
+    .avue-home__title {
+      color: #FFF;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .avue-home__sub-title {
+      color: #ABABAB;
+      font-size: 12px;
+    }</style><link href=/css/chunk-4234a234.faab7540.css rel=prefetch><link href=/css/chunk-48b3e5d2.b2b0723e.css rel=prefetch><link href=/css/chunk-5d98b6ca.cb25a2a7.css rel=prefetch><link href=/css/page.dec83c34.css rel=prefetch><link href=/css/views.1fd11849.css rel=prefetch><link href=/js/chunk-0b65ffb6.7b2ec8b0.js rel=prefetch><link href=/js/chunk-12950967.6876b410.js rel=prefetch><link href=/js/chunk-2d0a3196.60c58826.js rel=prefetch><link href=/js/chunk-2d0a3577.c1b5e70f.js rel=prefetch><link href=/js/chunk-2d0a40c8.d8026b00.js rel=prefetch><link href=/js/chunk-2d0a43df.ab736537.js rel=prefetch><link href=/js/chunk-2d0a4bbf.047a93da.js rel=prefetch><link href=/js/chunk-2d0aa90c.19818a1e.js rel=prefetch><link href=/js/chunk-2d0aab07.bb7ef2b5.js rel=prefetch><link href=/js/chunk-2d0abc00.ac8a5c26.js rel=prefetch><link href=/js/chunk-2d0ae937.25e52380.js rel=prefetch><link href=/js/chunk-2d0aeb45.f58c100d.js rel=prefetch><link href=/js/chunk-2d0af08c.bd3d248f.js rel=prefetch><link href=/js/chunk-2d0afa49.ce2bdd65.js rel=prefetch><link href=/js/chunk-2d0b1fd5.a39bb3bf.js rel=prefetch><link href=/js/chunk-2d0b21d7.c1f6e591.js rel=prefetch><link href=/js/chunk-2d0b2762.0ff1a975.js rel=prefetch><link href=/js/chunk-2d0b6187.d24e3905.js rel=prefetch><link href=/js/chunk-2d0ba136.5fd56d48.js rel=prefetch><link href=/js/chunk-2d0bb267.77e693cf.js rel=prefetch><link href=/js/chunk-2d0bcec1.4fe52bf4.js rel=prefetch><link href=/js/chunk-2d0bdf38.827087d0.js rel=prefetch><link href=/js/chunk-2d0bff92.c91179fb.js rel=prefetch><link href=/js/chunk-2d0c0494.8fef595c.js rel=prefetch><link href=/js/chunk-2d0c0a09.4b4d325b.js rel=prefetch><link href=/js/chunk-2d0c4313.ae8defcb.js rel=prefetch><link href=/js/chunk-2d0c46d1.b2407698.js rel=prefetch><link href=/js/chunk-2d0c4a95.8ccb2cb6.js rel=prefetch><link href=/js/chunk-2d0c512b.9d76f854.js rel=prefetch><link href=/js/chunk-2d0c86e3.6631565c.js rel=prefetch><link href=/js/chunk-2d0c8f4c.7714e40d.js rel=prefetch><link href=/js/chunk-2d0cf16e.5d53717b.js rel=prefetch><link href=/js/chunk-2d0d056d.fc7e0644.js rel=prefetch><link href=/js/chunk-2d0d0645.be9ad33c.js rel=prefetch><link href=/js/chunk-2d0d2f22.eaa911b8.js rel=prefetch><link href=/js/chunk-2d0d61fd.23535d44.js rel=prefetch><link href=/js/chunk-2d0d7e63.437c83d0.js rel=prefetch><link href=/js/chunk-2d0dda4e.693c4fea.js rel=prefetch><link href=/js/chunk-2d0de971.96df7a76.js rel=prefetch><link href=/js/chunk-2d0e1b57.0b074091.js rel=prefetch><link href=/js/chunk-2d0e1fbe.5cd9360c.js rel=prefetch><link href=/js/chunk-2d0e22d6.9810d3f7.js rel=prefetch><link href=/js/chunk-2d0e4caf.86f668d8.js rel=prefetch><link href=/js/chunk-2d0e4fe5.5222f603.js rel=prefetch><link href=/js/chunk-2d0e542a.9d5520fe.js rel=prefetch><link href=/js/chunk-2d0e57ec.76defb7a.js rel=prefetch><link href=/js/chunk-2d0e5b34.3d80c77d.js rel=prefetch><link href=/js/chunk-2d0e6553.e63efc5b.js rel=prefetch><link href=/js/chunk-2d0e6c86.04ca78cc.js rel=prefetch><link href=/js/chunk-2d0ea098.517b6894.js rel=prefetch><link href=/js/chunk-2d0f0a11.394918ad.js rel=prefetch><link href=/js/chunk-2d208ac5.38ab1b75.js rel=prefetch><link href=/js/chunk-2d209408.dcf3e796.js rel=prefetch><link href=/js/chunk-2d20f745.b9346d33.js rel=prefetch><link href=/js/chunk-2d20ff23.0a32951c.js rel=prefetch><link href=/js/chunk-2d2138c7.f67541ef.js rel=prefetch><link href=/js/chunk-2d216f3b.646421ca.js rel=prefetch><link href=/js/chunk-2d217e5b.d7277d77.js rel=prefetch><link href=/js/chunk-2d21ab79.e55ce5be.js rel=prefetch><link href=/js/chunk-2d21b84a.023b6594.js rel=prefetch><link href=/js/chunk-2d21dcd2.62ea1944.js rel=prefetch><link href=/js/chunk-2d21f327.fb178513.js rel=prefetch><link href=/js/chunk-2d2214b3.c76d3b1e.js rel=prefetch><link href=/js/chunk-2d221799.37f3803e.js rel=prefetch><link href=/js/chunk-2d221814.ec689564.js rel=prefetch><link href=/js/chunk-2d221a34.9e9bdca7.js rel=prefetch><link href=/js/chunk-2d22502a.91282cdc.js rel=prefetch><link href=/js/chunk-2d226775.78870e4c.js rel=prefetch><link href=/js/chunk-2d229411.6884603b.js rel=prefetch><link href=/js/chunk-2d2295e9.6826d516.js rel=prefetch><link href=/js/chunk-2d22c171.d09ba544.js rel=prefetch><link href=/js/chunk-2d22c2b8.d3921267.js rel=prefetch><link href=/js/chunk-2d22ca58.7c0faf32.js rel=prefetch><link href=/js/chunk-2d2311f7.23948822.js rel=prefetch><link href=/js/chunk-2d237ee7.85ee0d5c.js rel=prefetch><link href=/js/chunk-2d238465.1b34f26e.js rel=prefetch><link href=/js/chunk-4234a234.4838402f.js rel=prefetch><link href=/js/chunk-48b3e5d2.ac420b74.js rel=prefetch><link href=/js/chunk-5d98b6ca.497d8696.js rel=prefetch><link href=/js/chunk-7532b3ea.ec803065.js rel=prefetch><link href=/js/chunk-e13e4362.623c008f.js rel=prefetch><link href=/js/page.9258ca6a.js rel=prefetch><link href=/js/views.c1c8fe60.js rel=prefetch><link href=/css/app.1f476444.css rel=preload as=style><link href=/css/chunk-vendors.e41156d0.css rel=preload as=style><link href=/js/app.42fce997.js rel=preload as=script><link href=/js/chunk-vendors.cf6bf3c7.js rel=preload as=script><link href=/css/chunk-vendors.e41156d0.css rel=stylesheet><link href=/css/app.1f476444.css rel=stylesheet></head><body><noscript><strong>很抱歉，如果没有 JavaScript 支持，Saber 将不能正常工作。请启用浏览器的 JavaScript 然后继续。</strong></noscript><div id=app><div class=avue-home><div class=avue-home__main><img class=avue-home__loading src=/svg/loading-spin.svg alt=loading><div class=avue-home__title>正在加载资源</div><div class="avue-home__sub-title d">初次加载资源可能需要较多时间 请耐心等待</div></div><div class=avue-home__footer></div></div></div><script src=/util/aes.js charset=utf-8></script><script src=/cdn/vue/2.6.10/vue.js charset=utf-8></script><script src=/cdn/vuex/3.1.1/vuex.min.js charset=utf-8></script><script src=/cdn/vue-router/3.0.1/vue-router.min.js charset=utf-8></script><script src=/cdn/axios/1.0.0/axios.min.js charset=utf-8></script><script src=/cdn/element-ui/2.15.7/index.js charset=utf-8></script><script src=/cdn/avue/2.13.2/avue.min.js charset=utf-8></script><script src=/js/chunk-vendors.cf6bf3c7.js></script><script src=/js/app.42fce997.js></script></body></html>
